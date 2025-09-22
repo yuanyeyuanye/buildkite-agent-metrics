@@ -34,7 +34,7 @@ func main() {
 
 		// backend config
 		backendOpt        = flag.String("backend", "cloudwatch", "Specify the backend to use: cloudwatch, newrelic, prometheus, stackdriver, statsd, opentelemetry")
-		statsdMetricsPrefix = flag.String("statsd-metrics-prefix", "buildkite.", "Specify the StatsD metrics prefix")
+		statsdMetricsPrefix = flag.String("statsd-metrics-prefix", "naws.buildkite.", "Specify the StatsD metrics prefix")
 		statsdHost        = flag.String("statsd-host", "127.0.0.1:8125", "Specify the StatsD server")
 		statsdTags        = flag.Bool("statsd-tags", false, "Whether your StatsD server supports tagging like Datadog")
 		prometheusAddr    = flag.String("prometheus-addr", ":8080", "Prometheus metrics transport bind address")
