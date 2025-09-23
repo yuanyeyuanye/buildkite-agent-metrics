@@ -57,7 +57,7 @@ func (cb *StatsD) collectWithTags(r *collector.Result) error {
 	}
 
 	for queue, counts := range r.Queues {
-		tags := append(commonTags, "queue:"+queue)
+		tags := append(commonTags, "agent_queue:"+queue)
 
 		for name, value := range counts {
 			if err := cb.client.Gauge(prefix+"queues."+name, float64(value), tags, 1.0); err != nil {
